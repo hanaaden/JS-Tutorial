@@ -25,12 +25,33 @@ let message;
 message = "Hello World!";
 ```
 ## Naming Variables
+
+### What variables can contain
 * Variables must contain only letters, digits and the symbols ``$`` and ``-``
 * The first character must not be a number. `Example:` 
 ```js 
 let 123name = "me";  //This is incorrect ❌
 ```
+### What variables cannot contain
+* Reserved keywords like ``name``, ``function``, ``for``, ``let`` etc.
+* Must not start with an ``_``
+* Must not contain a hyphen ``-``
+
 
 ## Data Types Stored In Variables
+There are two (2) types of data types stored in variables. They are ``Primitive`` and ``Non-Primitive`` datatype.
 
-## Variable Scope
+### Primitive
+* Strings: ``"Hello"``
+* Numbers: ``123``
+* Booleans: ``true``, ``false``
+* Null
+* Undefined
+* Symbol
+* BigInt
+
+### Non-Primitive
+* Object
+* Array
+* Function
+
