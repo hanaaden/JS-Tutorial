@@ -37,6 +37,11 @@ let 123name = "me";  //This is incorrect ❌
 * Must not start with an ``_``
 * Must not contain a hyphen ``-``
 
+### Case Matters
+
+A variable named <strong style="color:#ff004f;">mango</strong> is different from a variable named <strong style="color:green;">MANGO</strong>
+
+
 
 ## Data Types Stored In Variables
 There are two (2) types of data types stored in variables. They are ``Primitive`` and ``Non-Primitive`` datatype.
@@ -55,3 +60,31 @@ There are two (2) types of data types stored in variables. They are ``Primitive`
 * Array
 * Function
 
+## Casing Conventions
+### Camel Case
+This is the most common naming convention in JavaScript. 
+* The first word is in lowercase, and each subsequent word starts with an uppercase letter.
+* It is used for variables, functions, and object properties.
+#### Example:
+```js
+let userName = "John";
+const maxScore = 100;
+function getUserInfo() 
+```
+### Snake Case
+* All letters are lowercase and are separated by underscores
+* It is not often used in JavaScript, but sometimes appears in JSON keys, database fields.
+#### Example
+```js
+let user_name = "John";
+const max_score = 100;
+```
+
+### Pascals Case
+* Each word starts with an uppercase letter, including the first.
+#### Example
+```js
+class UserProfile {}
+function CreateAccount() {}
+const GameEngine = {};
+```
