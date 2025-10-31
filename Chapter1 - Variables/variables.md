@@ -88,3 +88,11 @@ class UserProfile {}
 function CreateAccount() {}
 const GameEngine = {};
 ```
+
+# Trial Questions
+
+* Declare a const variable ``val`` with the value <strong style="color:red;">77</strong>.
+* Declare a variable ``username`` using ``let`` with the value <strong style="color: green;">John</strong>.
+* Declare two variables: ``admin`` and ``name``.
+* Assign the value ``Peter`` to name.
+* Copy the value from name to admin.
