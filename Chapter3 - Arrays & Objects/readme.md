@@ -30,3 +30,50 @@ You can replace an item by accessing it using its index:
 fruits[1] = "orange";
 console.log(fruits); // ["apple", "orange", "mango"]
 ```
+
+arrays are data structure that is very inportant to use when you like to store multiple value 
+
+## how to use LENGTH property 
+
+so when you like to check how many elements are 
+inside your array you need to use length property 
+
+```js
+console.log(fruits.length)
+```
+## Multidimentions array 
+
+array inside another array we call nested array 
+
+```js 
+let elements = [[['H', 'Li', 'Na'], ['Be', 'Mg']], [['B', 'Al'], ['C', 'Si']]];'
+```
+
+you can access 
+```
+console.log(elements[0]); // [['H', 'Li', 'Na'], ['Be', 'Mg']]
+
+console.log(elements[0][0]); // ['H', 'Li', 'Na']
+
+console.log(elements[0][0][0]); // 'H'
+```
+
+## sparse Array 
+
+do you know when you have array and you put two 
+comma by mistake like this a=[1,2,,3,4] 
+you will end up sparse Array 
+sparse array is arrays that contain empty slot 
+
+so if you console you will get 
+-- 1,2,empty,3,4
+so its means you dont have undefined array or element 
+
+# how to compare arrays in JS 
+arrays and objects and when comparing it its not about 
+the actual value but its. reference 
+
+if I store two arrays same 
+a=[1,2,3 and b= [1,2,3] 
+so if we do a===b means it will give you false means its not equal 
+cuz its not about the value 
