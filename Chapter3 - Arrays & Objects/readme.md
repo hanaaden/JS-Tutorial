@@ -151,3 +151,50 @@ let x = [1,2,3,4]
 x[4] = 5 
 console.log(x) // 1,2,3,4,5 
 ```
+The variables on the left side of the assignment operator are assigned to the value of the corresponding elements of the array on the right
+
+## Common Array Methods in JS
+
+in JS arrays are objects 
+
+1: how to add and remove elements of array
+so all of the following methods mutate the original array 
+
+### how to use push( ) method 
+```js 
+let x = [1,2,3,4]
+x[4] = 5 
+console.log(x) // 1,2,3,4,5 
+```
+
+so now we simply added the array at the end 
+so we can use push method to that simply
+```js 
+x.push(6)
+```
+now we have array elements starts from 1 to 6 
+even you can do multiple elements using push 
+
+### How to Use the unshift() Method
+while push was adding at the end the unshift adds
+from the begginning and returns modified length of array
+```js
+x.unshift(22)
+```
+now we have 22,1,2,3,4,5,6
+
+### How to Use the pop() Method
+If you need to remove the last element of an array, you can use the pop() method.
+
+```js 
+x.pop()
+```
+now we removed the last elements 6 is gone 
+
+### How to Use the shift() Method
+
+as same as unshift method shift removes the first element of the array 
+```js 
+x.shift()
+```
+now we see that 22 is gone
