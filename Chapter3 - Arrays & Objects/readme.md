@@ -129,4 +129,10 @@ In the example above, the f1 function is called with six string arguments. And t
 
 it related unpacking them arrays so its simple way to assign values 
 
-
+```js 
+let collect = [1,2,3,4] 
+let [first , second , third] = collect 
+console.log(first)
+console.log(second)
+console.log(third) 
+```
