@@ -79,7 +79,67 @@ With the code above, the value of `Chris` is passed into the function body and `
 ```
 Doing this will cause the function to terminate when it sees the return statement and the expression ``num1 + num2`` will not run. In order to solve such problems, it is best to wrap the expression in a set of parenthesis.
 ```js
-    return(
+    return (
         num1 + num2
         );
 ```
+
+## Anonymous Function
+This is a function without a name. Hence the name `anonymous`.
+```js
+    (function (){
+        console.log("Hello World");
+    });
+```
+
+## Arrow Functions
+* Using an arrow function is a more simple and concise way of writing functions.
+* They are just like `function expressions` but more simple.
+```js
+    let sum = (a, b) => a + b;
+```
+### OR
+```js
+    let sayHi = () => alert("Hi");
+```
+## Multi-Line Arrow Functions
+Sometimes we need a more complex function, with multiple expressions and statements. In that case, we can enclose them in curly braces. The major difference is that curly braces require a return within them to return a value (just like a regular function does).
+
+```js
+    let sum = (a, b) => {  // the curly brace opens a multiline function
+    let result = a + b;
+    return result; // if we use curly braces, then we need to use the "return" keyword
+};
+
+alert( sum(1, 2) ); // 3
+```
+
+## Callback Functions
+A callback function is a function passed into another function as an argument.
+```js
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+function showOk() {
+  alert( "You agreed." );
+}
+
+function showCancel() {
+  alert( "You canceled the execution." );
+}
+
+// usage: functions showOk, showCancel are passed as arguments to ask
+ask("Do you agree?", showOk, showCancel);
+```
+The code above is a function ask(question, yes, no) with three parameters:
+
+`question` <br>
+Text of the question <br>
+`yes` <br>
+Function to run if the answer is “Yes” <br>
+`no` <br>
+Function to run if the answer is “No” <br>
+The function asks the question and, depending on the user’s answer, calls yes() or no():
+
