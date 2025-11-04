@@ -136,3 +136,18 @@ console.log(first)
 console.log(second)
 console.log(third) 
 ```
+The variables on the left side of the assignment operator are assigned to the value of the corresponding elements of the array on the right
+
+## Common Array Methods in JS
+
+in JS arrays are objects 
+
+1: how to add and remove elements of array
+so all of the following methods mutate the original array 
+
+### how to use push( ) method 
+```js 
+let x = [1,2,3,4]
+x[4] = 5 
+console.log(x) // 1,2,3,4,5 
+```
