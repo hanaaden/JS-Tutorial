@@ -143,3 +143,24 @@ Function to run if the answer is “Yes” <br>
 Function to run if the answer is “No” <br>
 The function asks the question and, depending on the user’s answer, calls yes() or no():
 
+# Trial Questions
+
+* Write a function called `add7` that takes one number and returns that number + 7.
+``add7(10) should return 17``
+
+* Write a function called `multiply` that takes 2 numbers and returns their product.
+``multiply(3, 2) should return 6``
+
+* Write a function called `capitalize` that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+```
+capitalize("abcd") should return "Abcd"
+capitalize("ABCD") should return "Abcd"
+capitalize("aBcD") should return "Abcd"
+```
+* Write a function called `lastLetter` that takes a string and returns the very last letter of that string:
+``lastLetter("abcd") should return "d"``
+
+* Create a function `square` that returns the square of a number.
+
+* Write a function `isEven` that returns true if a number is even, otherwise false.
+
