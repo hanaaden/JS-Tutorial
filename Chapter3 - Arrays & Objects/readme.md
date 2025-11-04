@@ -77,3 +77,13 @@ if I store two arrays same
 a=[1,2,3 and b= [1,2,3] 
 so if we do a===b means it will give you false means its not equal 
 cuz its not about the value 
+
+this happens because object references are compared, and not their actual content.
+
+When you try to access a value out of the index range, you get undefined as the return value
+
+JavaScript arrays are not fixed in size. They can grow and shrink according to their content
+
+## the spread operator and rest parameters 
+
+The spread operator and the rest parameter have similar syntax (...) but they perform fundamentally different operations.
