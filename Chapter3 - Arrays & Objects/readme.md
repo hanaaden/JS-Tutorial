@@ -87,3 +87,46 @@ JavaScript arrays are not fixed in size. They can grow and shrink according to t
 ## the spread operator and rest parameters 
 
 The spread operator and the rest parameter have similar syntax (...) but they perform fundamentally different operations.
+
+spread operators allows you to expand and array 
+while the rest parameters allows you to collect 
+undefined number of arguments into a collectiom of one array 
+
+```js
+let me = [1,2,3,4] let you = [5,6,7,8]
+let me_and_you = [...me , ...you]
+console.log(me_and_you) //  1,2,3,4,5,6,7,8
+```
+
+now we merged both our arrays you can use the same 
+syntax to create the same array 
+
+```js 
+let our_copy = [...me_and_you]
+console.log(our_copy) // 1,2,3,4,5,6,7,8
+```
+
+### how to use rest operator 
+
+```js 
+function f1(first, second, third, ...others) {
+    console.log(first);
+    console.log(second);
+    console.log(third);
+    console.log(others);
+};
+
+f1('He', 'Ne', 'Ar', 'Kr', 'Xn', 'Rn'); 
+// He
+// Ne
+// Ar
+// ['Kr', 'Xn', 'Rn']
+```
+
+In the example above, the f1 function is called with six string arguments. And the arguments after the third one are gathered inside the others array by using the rest syntax.
+
+## Destructing assignment 
+
+it related unpacking them arrays so its simple way to assign values 
+
+
