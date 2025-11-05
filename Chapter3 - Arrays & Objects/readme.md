@@ -258,20 +258,16 @@ a[1] === b[1]; // false
 
 JSON.stringify(a) === JSON.stringify(b); // true
 ```
-You might think that the comparison between the string representation of a and b would return false, since null and undefined are not equal. But in practice, they are both stringified to null.
 
-Sure — here’s your full text rewritten as a clear, simple, and structured article with no icons, ads, or distractions. I’ve only made the language smoother and easier to follow, without changing the meaning or any code examples.
 
-⸻
-
-How to Use the every() Method
+### How to Use the every() Method
 
 The every() method checks whether all elements in an array satisfy a condition defined in a callback function. It returns either true or false.
 
 Syntax
-
+```
 array.every((element, index, array) => {})
-
+```
 You can use every() to build a simple function that compares two arrays containing primitive values.
 
 const compareEvery = (arr1, arr2) => {
@@ -285,51 +281,48 @@ Explanation:
 	•	The && operator ensures the function returns true only if both conditions are true.
 
 Example:
-
+```js
 let a = [1, null, 3];
 let b = [1, undefined, 3];
 
 compareEvery(a, b); // false
+```
 
-
-⸻
-
-How to Copy an Array
+### How to Copy an Array
 
 Most array copy operations in JavaScript create a shallow copy rather than a deep one.
 A shallow copy means that if the array contains non-primitive values (like objects), changing the copy can also affect the original array.
 
-⸻
 
 How to Use the slice() Method
 
 The slice() method allows you to copy an entire array—or part of it—without changing the original array.
 
 Syntax
-
+```
 array.slice(start, end)
-
+```
 It takes two parameters: the starting index and the ending index (not included).
 If called without arguments, it copies the entire array.
 
 Example:
-
+```js
 let dough = ['flour', 'water', 'yeast', 'salt'];
 
 let doughCopy = dough.slice();
 console.log(doughCopy); // ['flour', 'water', 'yeast', 'salt']
-
+```
 If you change the copy, the original remains the same:
-
+```
 doughCopy[1] = 'wine';
 console.log(doughCopy); // ['flour', 'wine', 'yeast', 'salt']
 console.log(dough);     // ['flour', 'water', 'yeast', 'salt']
-
+```
 This works because the array contains only primitive values.
 However, when arrays contain objects, both copies share references to the same objects.
 
 Example:
-
+```js
 let albums = [
   { artist: 'Frank Zappa', title: 'Apostrophe' },
   { artist: 'Frank Zappa', title: 'One Size Fits All' }
@@ -340,18 +333,19 @@ let albumsCopy = albums.slice();
 albumsCopy[1]['title'] = 'Absolutely Free';
 console.log(albumsCopy);
 console.log(albums);
-
+```
 Both arrays show the updated title because they reference the same object.
 If you reassign an element to a new object, the change does not affect the original:
 
+```js
 albumsCopy[1] = { artist: 'Captain Beefheart', title: 'Safe as Milk' };
 console.log(albumsCopy);
 console.log(albums);
 
+```
 
-⸻
 
-How to Use the map() Method
+### How to Use the map() Method
 
 The map() method creates a new array by calling a function on every element of the original array.
 
@@ -360,7 +354,7 @@ Syntax
 array.map((element, index, array) => {})
 
 You can use map() to copy an array:
-
+```js
 let albums = [
   { artist: 'Frank Zappa', title: 'Apostrophe' },
   { artist: 'Frank Zappa', title: 'One Size Fits All' }
@@ -368,55 +362,37 @@ let albums = [
 
 let mapAlbums = albums.map(element => element);
 console.log(mapAlbums);
-
+```
 This also creates a shallow copy.
 
-⸻
 
-How to Create a Deep Copy
 
-To make a deep copy, you can convert an array to a JSON string using JSON.stringify() and then parse it back with JSON.parse().
 
-let albums = [
-  { artist: 'Frank Zappa', title: 'Apostrophe' },
-  { artist: 'Frank Zappa', title: 'One Size Fits All' }
-];
-
-let albumsCopy = JSON.parse(JSON.stringify(albums));
-console.log(albumsCopy);
-
-This method ensures the copy is completely independent of the original array.
-
-⸻
-
-How to Search Inside an Array
+### How to Search Inside an Array
 
 There are several methods to search for elements in an array, either by value or by index.
 
-⸻
-
-How to Use the includes() Method
+### How to Use the includes() Method
 
 The includes() method checks if an array contains a specific value.
 
 Syntax
-
+```
 array.includes(value, startingIndex)
-
+```
 It returns true if the value is found, otherwise false.
 
 Example:
-
+```js
 let dMinor = ['D', 'E', 'F', 'G', 'A', 'B♭', 'C'];
 
 dMinor.includes('E');    // true
 dMinor.includes('E', 2); // false
-
+```
 You can also specify the index to start searching from. The default is 0.
 
-⸻
 
-How to Use the indexOf() Method
+### How to Use the indexOf() Method
 
 The indexOf() method returns the first index where a specific value is found, or -1 if it is not found.
 
