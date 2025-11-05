@@ -198,3 +198,39 @@ as same as unshift method shift removes the first element of the array
 x.shift()
 ```
 now we see that 22 is gone
+
+
+### How to Use the splice() Method
+
+so now why we can't remove the element in a specific area 
+like exactly where I want 
+
+the syntax 
+```
+array.splice(start, count)
+
+```
+
+the first parameter is starting index while the second is how many numbers 
+to remove 
+```js
+let x = [1,2,3,4,5,6]
+x.splice(1 , 3]
+// 1,5,6 
+```
+
+so its simply saying start index one and remove 3 
+elements 
+
+### How to Combine Arrays
+
+you will use concat( ) to combine arrays 
+If you need to combine two or more arrays – that is create a single array containing each element of the arrays you want to merge – you can use the concat() method. 
+
+You need to call .concat() on the array that should come first, passing as arguments the arrays you want it to merge with. 
+
+```js 
+let me = [1,2,3,4]
+let you = [5,6,7,8]
+me.concat(you)
+// 1,2,3,4,5,6,7,8
