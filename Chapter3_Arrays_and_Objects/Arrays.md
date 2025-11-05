@@ -259,92 +259,6 @@ a[1] === b[1]; // false
 JSON.stringify(a) === JSON.stringify(b); // true
 ```
 
-
-### How to Use the every() Method
-
-The every() method checks whether all elements in an array satisfy a condition defined in a callback function. It returns either true or false.
-
-Syntax
-```
-array.every((element, index, array) => {})
-```
-You can use every() to build a simple function that compares two arrays containing primitive values.
-
-const compareEvery = (arr1, arr2) => {
-  return arr1.length === arr2.length &&
-  arr1.every((elem, index) => elem === arr2[index]);
-};
-
-Explanation:
-	•	First, the lengths of both arrays are compared. If they are not equal, the arrays are not the same.
-	•	Then, every() is used on the first array. The callback checks if every element in arr1 is equal to the element at the same index in arr2.
-	•	The && operator ensures the function returns true only if both conditions are true.
-
-Example:
-```js
-let a = [1, null, 3];
-let b = [1, undefined, 3];
-
-compareEvery(a, b); // false
-```
-
-### How to Copy an Array
-
-Most array copy operations in JavaScript create a shallow copy rather than a deep one.
-A shallow copy means that if the array contains non-primitive values (like objects), changing the copy can also affect the original array.
-
-
-How to Use the slice() Method
-
-The slice() method allows you to copy an entire array—or part of it—without changing the original array.
-
-Syntax
-```
-array.slice(start, end)
-```
-It takes two parameters: the starting index and the ending index (not included).
-If called without arguments, it copies the entire array.
-
-Example:
-```js
-let dough = ['flour', 'water', 'yeast', 'salt'];
-
-let doughCopy = dough.slice();
-console.log(doughCopy); // ['flour', 'water', 'yeast', 'salt']
-```
-If you change the copy, the original remains the same:
-```
-doughCopy[1] = 'wine';
-console.log(doughCopy); // ['flour', 'wine', 'yeast', 'salt']
-console.log(dough);     // ['flour', 'water', 'yeast', 'salt']
-```
-This works because the array contains only primitive values.
-However, when arrays contain objects, both copies share references to the same objects.
-
-Example:
-```js
-let albums = [
-  { artist: 'Frank Zappa', title: 'Apostrophe' },
-  { artist: 'Frank Zappa', title: 'One Size Fits All' }
-];
-
-let albumsCopy = albums.slice();
-
-albumsCopy[1]['title'] = 'Absolutely Free';
-console.log(albumsCopy);
-console.log(albums);
-```
-Both arrays show the updated title because they reference the same object.
-If you reassign an element to a new object, the change does not affect the original:
-
-```js
-albumsCopy[1] = { artist: 'Captain Beefheart', title: 'Safe as Milk' };
-console.log(albumsCopy);
-console.log(albums);
-
-```
-
-
 ### How to Use the map() Method
 
 The map() method creates a new array by calling a function on every element of the original array.
@@ -392,31 +306,14 @@ dMinor.includes('E', 2); // false
 You can also specify the index to start searching from. The default is 0.
 
 
-### How to Use the indexOf() Method
+## How to Use the find() Method
 
-The indexOf() method returns the first index where a specific value is found, or -1 if it is not found.
-
-Syntax
-
-array.indexOf(value, startingIndex)
-
-Example:
-```js
-
-let dMinor = ['D', 'E', 'F', 'G', 'A', 'B♭', 'C'];
-
-dMinor.indexOf('E');    // 1
-dMinor.indexOf('E', 2); // -1
-
-```
-How to Use the find() and findLast() Methods
-
-The find() and findLast() methods return the first or last element that satisfies a condition.
+The find() method return the first or last element that satisfies a condition.
 
 Syntax
 ```
 array.find((element, index, array) => {})
-array.findLast((element, index, array) => {})
+
 ```
 They return undefined if no element matches the condition.
 
@@ -433,70 +330,10 @@ let animals = [
 animals.find(el => el.track.includes('Pigs'));
 // { no: 1, track: 'Pigs on the Wing (Part One)' }
 
-animals.findLast(el => el.track.includes('Pigs'));
-// { no: 5, track: 'Pigs on the Wing (Part Two)' }
-
 animals.find(el => el.track.includes('Horses'));
 // undefined
 ```
 
-### How to Use the findIndex() and findLastIndex() Methods
-
-The findIndex() and findLastIndex() methods work like find() and findLast(),
-but they return the index of the matching element instead of the element itself.
-
-Syntax
-```
-
-array.findIndex((element, index, array) => {})
-array.findLastIndex((element, index, array) => {})
-```
-
-Example:
-
-```js
-let animals = [
-  { no: 1, track: 'Pigs on the Wing (Part One)' },
-  { no: 2, track: 'Dogs' },
-  { no: 3, track: 'Pigs (Three Different Ones)' },
-  { no: 4, track: 'Sheep' },
-  { no: 5, track: 'Pigs on the Wing (Part Two)' }
-];
-
-animals.findIndex(el => el.track.includes('Pigs')); // 0
-animals.findLastIndex(el => el.track.includes('Pigs')); // 4
-animals.findIndex(el => el.track.includes('Horses')); // -1
-```
-
-Absolutely! Here’s the README markdown with my own examples instead of the original ones:
-
----
-
-## Check if Array Elements Meet a Condition
-
-### `every()`
-Use `every()` to check if **all elements** satisfy a condition.  
-
-```javascript
-const numbers = [2, 4, 6, 8];
-
-const allEven = numbers.every(num => num % 2 === 0);
-console.log(allEven); // true
-```
-some()
-
-Use some() to check if at least one element satisfies a condition.
-
-```js
-const fruits = ['apple', 'banana', 'cherry'];
-
-const hasBanana = fruits.some(fruit => fruit === 'banana');
-const hasMango = fruits.some(fruit => fruit === 'mango');
-
-console.log(hasBanana); // true
-console.log(hasMango);  // false
-
-```
 
 ### Filter Array Elements
 
@@ -520,34 +357,6 @@ console.log(expensiveProducts);
 */
 ```
 
-### Sort an Array
-
-sort()
-
-sort() rearranges array elements in place. A callback function allows custom sorting.
-```js
-const names = ['Zara', 'Mike', 'Anna', 'John'];
-
-// Ascending alphabetical order
-names.sort((a, b) => a > b ? 1 : -1);
-console.log(names); // ['Anna', 'John', 'Mike', 'Zara']
-
-// Descending alphabetical order
-names.sort((a, b) => a < b ? 1 : -1);
-console.log(names); // ['Zara', 'Mike', 'John', 'Anna']
-
-```
-
-Perform Operations on Every Element
-
-### map()
-
-map() creates a new array by transforming each element.
-```js 
-const numbers = [1, 2, 3, 4];
-const squares = numbers.map(num => num * num);
-console.log(squares); // [1, 4, 9, 16]
-```
 ### forEach()
 
 forEach() performs a task on each element but does not return a new array.
