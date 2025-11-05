@@ -467,3 +467,122 @@ animals.findIndex(el => el.track.includes('Pigs')); // 0
 animals.findLastIndex(el => el.track.includes('Pigs')); // 4
 animals.findIndex(el => el.track.includes('Horses')); // -1
 ```
+
+Absolutely! Here’s the README markdown with my own examples instead of the original ones:
+
+---
+
+## Check if Array Elements Meet a Condition
+
+### `every()`
+Use `every()` to check if **all elements** satisfy a condition.  
+
+```javascript
+const numbers = [2, 4, 6, 8];
+
+const allEven = numbers.every(num => num % 2 === 0);
+console.log(allEven); // true
+
+some()
+
+Use some() to check if at least one element satisfies a condition.
+
+const fruits = ['apple', 'banana', 'cherry'];
+
+const hasBanana = fruits.some(fruit => fruit === 'banana');
+const hasMango = fruits.some(fruit => fruit === 'mango');
+
+console.log(hasBanana); // true
+console.log(hasMango);  // false
+
+
+
+### Filter Array Elements
+
+filter()
+
+filter() returns a new array containing elements that pass a test.
+
+const products = [
+  { name: 'Laptop', price: 1200 },
+  { name: 'Phone', price: 800 },
+  { name: 'Tablet', price: 500 }
+];
+
+const expensiveProducts = products.filter(item => item.price > 700);
+console.log(expensiveProducts);
+/*
+[
+  { name: 'Laptop', price: 1200 },
+  { name: 'Phone', price: 800 }
+]
+*/
+
+
+### Sort an Array
+
+sort()
+
+sort() rearranges array elements in place. A callback function allows custom sorting.
+
+const names = ['Zara', 'Mike', 'Anna', 'John'];
+
+// Ascending alphabetical order
+names.sort((a, b) => a > b ? 1 : -1);
+console.log(names); // ['Anna', 'John', 'Mike', 'Zara']
+
+// Descending alphabetical order
+names.sort((a, b) => a < b ? 1 : -1);
+console.log(names); // ['Zara', 'Mike', 'John', 'Anna']
+
+
+
+Perform Operations on Every Element
+
+map()
+
+map() creates a new array by transforming each element.
+
+const numbers = [1, 2, 3, 4];
+const squares = numbers.map(num => num * num);
+console.log(squares); // [1, 4, 9, 16]
+
+forEach()
+
+forEach() performs a task on each element but does not return a new array.
+
+const colors = ['red', 'green', 'blue'];
+colors.forEach(color => console.log(color.toUpperCase()));
+/*
+RED
+GREEN
+BLUE
+*/
+
+
+
+Reduce an Array to a Single Value
+
+reduce()
+
+reduce() applies a function to accumulate a single value from an array.
+
+const expenses = [100, 200, 50, 75];
+
+const total = expenses.reduce((sum, amount) => sum + amount, 0);
+console.log(total); // 425
+
+Another example: counting specific elements
+
+const pets = ['dog', 'cat', 'dog', 'parrot', 'dog'];
+
+const dogCount = pets.reduce((count, pet) => pet === 'dog' ? count + 1 : count, 0);
+console.log(dogCount); // 3
+
+
+⸻
+
+These examples cover common operations that are essential when working with arrays in JavaScript. They provide a practical reference for beginners and intermediates alike.
+
+---
+
