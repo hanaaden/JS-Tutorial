@@ -525,7 +525,7 @@ console.log(expensiveProducts);
 sort()
 
 sort() rearranges array elements in place. A callback function allows custom sorting.
-```
+```js
 const names = ['Zara', 'Mike', 'Anna', 'John'];
 
 // Ascending alphabetical order
