@@ -222,32 +222,7 @@ me.concat(you)
 // 1,2,3,4,5,6,7,8
 ```
 
-### How to convert array into string 
 
-you have to use two methods join() and toString()
-```js
-let animals = ['pig', 'dog', 'sheep'];
-
-animals.toString(); // 'pig,dog,sheep'
-
-animals.join(', '); // 'pig, dog, sheep'
-
-animals.join(' '); // 'pig dog sheep'
-
-animals.join(' * '); // 'pig * dog * sheep'
-```
-
-### How to Use the JSON.stringify() Method
-
-```js
-let albums = [
-    {artist: 'Frank Zappa', title: 'Apostrophe', year: 1974},
-    {artist: 'Frank Zappa', title: 'One Size Fits All', year: 1975}
-];
-
-JSON.stringify(albums);
-//'[{"artist":"Frank Zappa","title":"Apostrophe","year":1974},{"artist":"Frank Zappa","title":"One Size Fits All","year":1975}]'
-```
 
 can we compare arrays yeah we can 
 ```js
@@ -371,24 +346,7 @@ BLUE
 
 ```
 
-Reduce an Array to a Single Value
 
-### reduce()
-
-reduce() applies a function to accumulate a single value from an array.
-```js
-const expenses = [100, 200, 50, 75];
-
-const total = expenses.reduce((sum, amount) => sum + amount, 0);
-console.log(total); // 425
-```
-Another example: counting specific elements
-```js
-const pets = ['dog', 'cat', 'dog', 'parrot', 'dog'];
-
-const dogCount = pets.reduce((count, pet) => pet === 'dog' ? count + 1 : count, 0);
-console.log(dogCount); // 3
-```
 
 ## Exercises 
 Create an array and print the first and last item.
