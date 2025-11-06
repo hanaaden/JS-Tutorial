@@ -390,5 +390,34 @@ const dogCount = pets.reduce((count, pet) => pet === 'dog' ? count + 1 : count, 
 console.log(dogCount); // 3
 ```
 
+## Exercises 
+Create an array and print the first and last item.
 
+Add an item to the array and remove one.
+
+Check if a value exists in an array using includes().
+
+Use indexOf() to find the position of an item.
+
+Loop through an array and log each value.
+
+Use push() to add and pop() to remove from the end.
+
+Use shift() and unshift() to work with the start of the array.
+
+Use splice() to insert and remove items in the middle.
+
+Create an array of numbers and filter only numbers > 50.
+
+Map an array of numbers to return each number + 10.
+
+Create an array of objects and log one property of each object.
+
+Find an object in an array using find().
+
+Sort an array of numbers.
+
+Reverse an array.
+
+Join an array into a single string.
 
