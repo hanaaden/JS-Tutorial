@@ -201,7 +201,7 @@ the first parameter is starting index while the second is how many numbers
 to remove 
 ```js
 let x = [1,2,3,4,5,6]
-x.splice(1 , 3]
+x.splice(1 , 3)
 // 1,5,6 
 ```
 
