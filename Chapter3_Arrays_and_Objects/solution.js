@@ -65,3 +65,42 @@ console.log();
 const arr10 = [1, 2, 3, 4, 5];
 let mapped = arr10.map(arr => arr + 10);
 console.log(mapped);
+console.log();
+
+// Task 11
+const arr11 = [
+    {name: "Ken", age: 12}, 
+    {name: "Ben", age: 15}, 
+    {name: "Pen", age: 19}
+];
+
+arr11.map(arr => console.log(arr.name));
+console.log();
+
+// Task 12
+const arr12 = [
+    {person: "John", sex: "male"}, 
+    {person: "Katie", sex: "female"}, 
+    {person: "Mark", sex: "male"},
+    {person: "Amber", sex: "female"}
+];
+
+arr12.find(arr => console.log(arr.sex.includes("female")));
+console.log();
+
+// Task 13
+const arr13 = ["b", "c", "a", "d"];
+let sorted = arr13.sort()
+console.log(sorted);
+console.log();
+
+// Task 14
+const arr14 = [1, 2, 3, 4, 5];
+let reversed = arr14.reverse();
+console.log(reversed);
+console.log();
+
+// Task 15
+const arr15 = ["My", "name", "is", "Soul"];
+let joined = arr15.join(" ");
+console.log(joined);
