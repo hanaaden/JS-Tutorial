@@ -25,11 +25,11 @@ With function expression, the output of the function is stored in a variable. ``
 ## Invoking Functions
 To invoke a function, you write the name of the function with a set of parenthesis ``()``
 ```js
-    function myfunc(){
+    function greet(){
         return "Hello World!";
     }
 
-    myfunc();
+    greet();
 ```
 
 ## Function Parameters And Arguments

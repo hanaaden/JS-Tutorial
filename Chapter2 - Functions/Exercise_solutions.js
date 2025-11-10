@@ -34,7 +34,7 @@ console.log(evenChecker(6))
 const Uppercase =(word)=>{
   const chars = word.charAt(0)
   const upper = chars.toUpperCase()
-  const remaning = word.slice(1)
-  return upper + remaning
+  const remaining = word.slice(1)
+  return upper + remaining
 }
 console.log(Uppercase("farax"))
