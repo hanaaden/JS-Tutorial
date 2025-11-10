@@ -17,7 +17,7 @@ console.log(lastLatter("abd"))
 const square =(a)=>{
   return a*a
 }
-console.log(3)
+console.log(square(3))
 
 const evenChecker =(n)=>{
   if(n % 2 == 0){
@@ -32,9 +32,10 @@ console.log(evenChecker(6))
 
 
 const Uppercase =(word)=>{
-  const chars = word.charAt(0)
+  const words = word.toLowerCase()
+  const chars = words.charAt(0)
   const upper = chars.toUpperCase()
-  const remaining = word.slice(1)
+  const remaining = words.slice(1)
   return upper + remaining
 }
-console.log(Uppercase("farax"))
+console.log(Uppercase("FARAX"))
