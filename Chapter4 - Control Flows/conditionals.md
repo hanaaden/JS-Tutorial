@@ -34,3 +34,36 @@ if(condition){
     // final code to run
 }
 ```
+``Note:`` Conditionals go hand in hand with the `comparison operators`.
+
+#### Example:
+
+```js
+let weather = prompt("Please enter the weather today");
+
+if(weather === "sunny"){
+    console.log("It is sunny today!");
+} else if(weather === "cloudy"){
+    console.log("It is cloudy today!");
+} else if(weather === "rainy"){
+    console.log("It is rainy today!");
+} else{
+    console.log("You didn't enter a weather condition");
+}
+```
+
+## Tenary Operator
+The `tenary operator` is a simplified form of writing if/else conditions. Tenary operators are usually assigned to variables thus storing their values when the condition runs. <br/> `Syntax:`
+```js
+condition ? run this code : run this code instead
+```
+``Code Example:``
+```js
+let age =  prompt("Please enter your age");
+
+let accessAllowed = (age > 18) ? true : false;
+
+console.log(accessAllowed);
+```
+
+## Switch Statement
