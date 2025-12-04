@@ -3,6 +3,9 @@
 
 An Object is a variable that can hold many variables.
 Objects are collections of key-value pairs, where each key (known as property names) has a value.
+car is object 
+color is property 
+red value
 Different cars have the same properties, but the property values can differ from car to car.
 
 
