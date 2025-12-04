@@ -56,6 +56,7 @@ console.log(Object.keys(obj).length);
 ```
 
 ### map 
+This code creates an array called users that contains three objects, and each object represents a user with an id, name, and age. Then, the .map() function loops through every object in the array and runs the callback function for each one. Inside that function, it prints the user’s name and age to the console. So when the map runs, it will log: “Alesh 16”, “Hani 17”, and “Musa 15”.
 ```js
 const users = [
   { id: 1, name: "Alesh", age: 16 },
@@ -69,6 +70,7 @@ users.map(user => {
 ```
 
 ### objects with loop 
+This code creates an object called user with three properties: name, age, and country. Then the for...in loop goes through each property (key) inside the object one by one. For every key it finds, it prints both the key and its value to the console. So the loop will print: name Alesh, age 16, and country Somalia.
 ```js
 const user = {
   name: "Alesh",
