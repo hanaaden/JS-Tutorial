@@ -57,6 +57,7 @@ The `tenary operator` is a simplified form of writing if/else conditions. Tenary
 ```js
 condition ? run this code : run this code instead
 ```
+The ternary operator is not just for setting variable values. You can also run functions, or lines of code anything you like. 
 ``Code Example:``
 ```js
 let age =  prompt("Please enter your age");
@@ -67,3 +68,23 @@ console.log(accessAllowed);
 ```
 
 ## Switch Statement
+It takes a single expression/value as an input, and then looks through several choices until they find one that matches that value, executing the corresponding code that goes along with it.
+`Syntax:`
+```js
+switch (expression) {
+  case choice1:
+    // run this code
+    break;
+
+  case choice2:
+    // run this code instead
+    break;
+
+  // include as many cases as you like
+
+  default:
+    // actually, just run this code
+    break;
+}
+```
+The switch statement is a nicer way of writing multiple if/else statements. The ``default`` statement is like the ``else`` statement. It runs when no condition is met.
